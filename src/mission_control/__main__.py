@@ -1,3 +1,5 @@
+from mission_control.core.config.loader.ConfigLoader import ConfigLoader as loader
+
 print(r"""
   __  __ ___ ____ ____ ___ ___  _   _    ____ ___  _   _ _____ ____   ___  _     
  |  \/  |_ _/ ___/ ___|_ _/ _ \| \ | |  / ___/ _ \| \ | |_   _|  _ \ / _ \| |    
@@ -19,3 +21,8 @@ print(r"""
                                           |___/       |___/                                 
 
       """);
+
+load = loader("config/config.toml")
+appConfig = load.load()
+
+print(appConfig)

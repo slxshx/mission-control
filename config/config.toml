@@ -1,0 +1,4 @@
+[app]
+name = "Mission Control"
+version = "v0.1.0"
+environment = "Development"
