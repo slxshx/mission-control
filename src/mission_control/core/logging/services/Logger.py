@@ -11,9 +11,10 @@ class Logger():
         
 
     def _log(self, label, color, message):
-        level = Text(f"[{label}]")
-        level.stylize(f"{color}")
-        self.console.print(f"{level} {message}")
+        level = Text(f"[{label}] ")
+        level.stylize(color)
+        level += message
+        self.console.print(level)
 
     def info(self, message):
         self._log(LogLevel.INFO.label, LogLevel.INFO.color,  message)
